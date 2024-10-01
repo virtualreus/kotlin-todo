@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -21,6 +22,13 @@ class MainActivity : AppCompatActivity() {
         val todos: MutableList<String> = mutableListOf();
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, todos);
         listView.adapter = adapter;
+
+        listView.setOnItemClickListener { adapterView, view, position, id ->
+            val text = listView.getItemAtPosition(position).toString()
+            adapter.remove(text)
+            Toast.makeText(this, "Удален: $text", Toast.LENGTH_SHORT).show()
+        }
+
         button.setOnClickListener {
             val text = userData.text.toString().trim()
             if(text != "")
