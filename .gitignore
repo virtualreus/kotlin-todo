@@ -1,15 +1,52 @@
+# Библиотеки и зависимости
 *.iml
-.gradle
+*.idea/
+*.swp
+*.swo
+
+# Файлы сборки
+.gradle/
+.build/
+
+# Локальные конфигурационные файлы
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+/gradle.properties
+/key.properties
+
+# Временные файлы
+/captures/
+.navigation/
+*.log
+*.logcat
+*.trace
+
+# Собранные APK-файлы
+*.apk
+*.ap_
+
+# Файлы для Dalvik VM
+*.dex
+*.class
+
+# Приватные ключи
+META-INF/
+*.RSA
+*.DSA
+*.SF
+*.Digest
+
+# Отладочная информация
+*.db
+*.db-journal
+*.sqlite-shm
+*.sqlite-wal
+
+# Другие файлы
+*.log
+*.logcat
+*.trace
+*.pid
+*.ser
+*.tmp
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+Thumbs.db
